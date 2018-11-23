@@ -1,0 +1,580 @@
+@import "base.scss";
+
+/****************main.css****************/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, "Microsoft Yahei", Tahoma, sans-serif;
+  background: #fff;
+}
+
+body {
+  margin: 0;
+  line-height: 1;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+img,
+input,
+button {
+  border: 0;
+  outline: none;
+}
+
+button {
+  background: none;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+progress {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+//   user-select: none;
+//   -webkit-user-select: none;
+}
+
+@font-face {
+  font-family: jianlc-ttfd;
+  src: url(~@fonts/jianlc-ttfd.otf) format('trueType'), url(~@fonts/jianlc-ttfd.ttf) format('trueType');
+}
+
+.ttfd-num {
+    font-family: jianlc-ttfd;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: "Microsoft YaHei", "微软雅黑", "Tahoma", "Helvetica";
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block
+}
+
+del {
+  text-decoration: line-through
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  outline: 0;
+  text-decoration: none;
+}
+
+a:active {
+  opacity: .7;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+button,
+select {
+  text-transform: none
+}
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  cursor: pointer
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input[type=text] {
+  padding: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: inherit;
+}
+
+input[type=search] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 2;
+  color: inherit
+}
+
+/**
+* 垂直居中对齐
+*/
+
+.va-m {
+  vertical-align: middle;
+}
+
+/**
+* name:p-lr-40:
+* des:内容左右40px的空白,可以通过extend的方式使用
+*/
+
+.p-lr-40 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+/*底部空白30px*/
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+
+/**
+* 常用margin
+* 可以通过extend的方式使用*
+*/
+
+.m-auto {
+  margin: 0 auto;
+}
+
+
+/**
+ * 水平/垂直细线
+ */
+
+.h-line,
+.v-line {
+  -webkit-transform: scaleY(.3);
+  transform: scaleY(.3);
+  background: $c-e5e5e5;
+}
+
+.h-line {
+  height: 1px;
+}
+
+.v-line {
+  width: 1px;
+}
+
+
+/*按钮不可用状态*/
+
+.opacity7 {
+  opacity: .7;
+}
+
+
+/*移动端最大宽度*/
+
+.content640 {
+  max-width: 640px;
+}
+
+
+/**
+* 规则、公告样式
+*/
+
+%ul-info-box {
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 1.8;
+  text-align: justify;
+  li {
+    padding-left: 20px;
+  }
+}
+
+.li-disc {
+  @extend %ul-info-box;
+  li {
+    list-style: disc;
+  }
+}
+
+.li-cricle {
+  @extend %ul-info-box;
+  li {
+    list-style: circle;
+  }
+}
+
+.li-decimal {
+  @extend %ul-info-box;
+  li {
+    list-style: decimal;
+  }
+}
+
+.li-cjk-ideographic {
+  @extend %ul-info-box;
+  li {
+    list-style: cjk-ideographic;
+  }
+}
+
+.li-image {
+  @extend %ul-info-box;
+  li {
+    list-style: none;
+    background: url(https://img.jianlc.com/activity/birthday/note2.png) no-repeat 0 10px;
+    background-size: 10px;
+  }
+}
+
+
+/*
+icon
+*/
+
+.j-icon-iphone {
+  width: 26px;
+  height: 41px;
+  background: url(https://img.jianlc.com/common/phone.png) no-repeat center center;
+}
+
+.j-icon-img-code {
+  width: 30px;
+  height: 36px;
+  background: url(https://img.jianlc.com/common/imgcode.png) no-repeat center center;
+}
+
+.j-icon-sms {
+  width: 32px;
+  height: 25px;
+  background: url(https://img.jianlc.com/common/message.png) no-repeat center center;
+}
+
+.j-icon-close {
+  width: 26px;
+  height: 41px;
+  background: url(https://img.jianlc.com/activity/investRed/phone.png) no-repeat center center;
+}
+
+.j-icon-tip {
+  width: 26px;
+  height: 26px;
+  background: url(https://img.jianlc.com/common/tip.png) no-repeat center center;
+}
+
+
+/*
+表单
+*/
+
+.j-input-group {
+  display: table;
+  padding: 0 20px;
+  width: 100%;
+  border-bottom: 1px solid $c-ccc;
+}
+
+.j-icon-iphone,
+.j-icon-img-code,
+.j-icon-sms,
+.j-icon-tip,
+.j-input-control,
+.j-get-img-code,
+.j-get-sms-btn {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.j-input-control {
+  padding: 30px 27px;
+  border: none;
+  width: 100%;
+  height: $h-90;
+  font-size: 26px;
+  background: transparent;
+}
+
+.j-input-control::placeholder {
+  font-size: 26px;
+  color: $c-999;
+}
+
+.j-img-code {
+  width: 140px;
+  height: 50px;
+}
+
+.j-get-sms-btn {
+  text-align: right;
+  width: auto;
+}
+
+.j-sms-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  border-left: 1px solid $c-999;
+  padding-left: 20px;
+  white-space: nowrap;
+}
+
+.j-sms-btn.off {
+  color: $c-999;
+}
+
+.j-error-tip {
+  border: none;
+}
+
+.j-error-text {
+  padding: 0 27px;
+  border: none;
+  font-size: 22px;
+}
+
+.j-btn-group {
+  margin: 0 auto;
+  width: 612px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.j-btn-on {
+  background: $c-c8a556;
+  color: $c-412f07;
+}
+
+.j-btn-hover {
+  opacity: .7;
+}
+
+.j-btn-off {
+  background: $c-ccc !important;
+  color: $c-999 !important;
+}
+
+.j-btn {
+  width: 100%;
+  font-size: 40px;
+  line-height: $h-90;
+  color: inherit;
+}
+
+//灰度
+.j-gray {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
+
+//vue过渡效果
+.fade-transition {
+  transition: opacity .2s linear;
+}
+
+.fade-enter,
+.fade-leave {
+  opacity: 0;
+}
+
+// 防止多次点击的弹层
+.clickLimit {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  z-index: 99999;
+}

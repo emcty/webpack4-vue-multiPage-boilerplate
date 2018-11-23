@@ -3,6 +3,7 @@ npm-debug.log
 .webpack-records.json
 node_modules/
 dist/
+src/assets/
 package-lock.json
 webpack.config.js
 
